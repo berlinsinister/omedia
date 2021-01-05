@@ -172,17 +172,22 @@
         font-size: 8pt;
     }
 
+    .name-grid {
+        letter-spacing: 0;        
+    }
+
     .photo-grid {
-        width: 60%;
+        width: 40%;
         border: 2px solid var(--orange);
     }
 
     .repos-grid ul {
         margin-left: 2vw;
+        margin-top: 1.2vw;
     }
 
     .repos-grid li {
-        padding: 0.35vw 1vw;
+        padding: 0.2vw 1vw;
     }
 
     .arrow-icon-grid {
