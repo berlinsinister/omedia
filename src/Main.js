@@ -24,26 +24,26 @@ class Main extends React.Component {
     }
 
     render() {
+        let { id, view, data, userPageData, repos, orgs, isUser } = this.props;
         let listViewClassName = '';
         let gridViewClassName = '';
         let userPageClassName = '';
-        if (this.props.id) {
+        if (id || isUser === 'not found') {
             userPageClassName = 'user-page-view';
             listViewClassName = 'hide';
             gridViewClassName = 'hide';
         } else {
-            if (this.props.view === 'list') {
+            if (view === 'list') {
                 listViewClassName = 'list-view';
                 gridViewClassName = 'hide';
                 userPageClassName = 'hide';
-            } else if (this.props.view === 'grid') {
+            } else if (view === 'grid') {
                 listViewClassName = 'hide';
                 gridViewClassName = 'grid-view';
                 userPageClassName = 'hide';
             }
         }
 
-        let { id, data, userPageData, repos, orgs } = this.props;
         let userListViewArr = [];
         let userGridViewArr = [];
         let listViewNumber = '';
@@ -85,6 +85,7 @@ class Main extends React.Component {
                         orgs={orgs}
                         handleCloseClick={this.handleCloseClick}
                         data={userPageData}
+                        isUser={isUser}
                     />
                 </div>
             </div>

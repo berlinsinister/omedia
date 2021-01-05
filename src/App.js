@@ -20,7 +20,8 @@ class App extends React.Component {
         url: ''
       },
       repos: [],
-      orgs: []
+      orgs: [],
+      isUser: 'not set'
     }
 
     this.handleViewSwitch = this.handleViewSwitch.bind(this);
@@ -41,10 +42,11 @@ class App extends React.Component {
     let id = this.state.items.indexOf(foundUser);
     id++;
     this.setState(state => {
-      if (foundUser)
+      if (foundUser) {
         return {
           id: id,
           mode: state.mode,
+          isUser: 'set',
           userPageData: {
             login: state.items[id - 1].login,
             avatar: state.items[id - 1].avatar_url,
@@ -52,6 +54,11 @@ class App extends React.Component {
             url: state.items[id - 1].html_url
           }
         }
+      } else {
+        return {
+          isUser: 'not found'
+        }
+      }
     });
   }
 
@@ -61,6 +68,7 @@ class App extends React.Component {
       return {
         id: id,
         mode: state.mode, // mode: state.mode - writing prev view mode
+        isUser: 'set',
         userPageData: {
           login: state.items[id - 1].login,
           avatar: state.items[id - 1].avatar_url,
@@ -73,7 +81,7 @@ class App extends React.Component {
 
   // from Main to Main
   handleCloseClick = () => {
-    this.setState(state => ({ id: '', mode: state.mode }));
+    this.setState(state => ({ id: '', mode: state.mode, isUser: 'not set', }));
   }
 
   // fetch
@@ -129,7 +137,7 @@ class App extends React.Component {
           <Navbar />
           <Menu />
           <div className="loading">
-            <i class="fas fa-spinner fa-pulse"></i>
+            <i className="fas fa-spinner fa-pulse"></i>
           </div>
         </div>
       );
@@ -150,6 +158,7 @@ class App extends React.Component {
             userPageData={userPageData}
             repos={repos}
             orgs={orgs}
+            isUser={this.state.isUser}
           />
         </div>
       );
