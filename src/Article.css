@@ -1,0 +1,25 @@
+.article {
+    padding: 0.5vw;
+    margin-bottom: 1vw;
+    font-size: 10pt;
+    font-weight: 200;
+    line-height: 1.6;
+    color: white;
+}
+
+.done {
+    padding: 0.2vw 0.2vw 0 0;
+    font-size: 1.2vw;
+    color: var(--orange);
+}
+
+.article-title {
+    text-transform: uppercase;
+    font-size: 12pt;
+}
+
+@media screen and (max-width: 1200px) {
+    .article {
+        font-size: 9pt;
+    }
+}

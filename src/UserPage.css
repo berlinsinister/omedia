@@ -1,0 +1,502 @@
+.user-page {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 20% 70% 10%;
+    background-color: var(--midblue);
+    color: white;
+    border-radius: 5px;
+    transition: 0.2s ease-out;
+    font-weight: 300;
+    font-size: 11pt;
+    position: relative;
+}
+
+.user-page > div {
+    display: flex;
+}
+
+.header, .footer {
+    grid-column: 1/3;    
+}
+
+/* header */
+.header {
+    border-bottom: 1px solid var(--lightblue);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.header-name-page {
+    font-size: 38pt;
+    opacity: 0.05;
+    font-style: italic;
+    text-transform: uppercase;
+    position: absolute;
+    top: 1vw;
+    left: 2vw;
+    font-weight: 200;
+}
+
+.logo-header-1 {
+    font-size: 250pt;
+    opacity: 0.05;
+    overflow: hidden;
+    position: absolute;
+    top: -2vw;
+    right: 1vw;
+}
+
+.logo-header-2 {
+    font-size: 200pt;
+    opacity: 0.05;
+    position: absolute;    
+    right: 19vw;
+    overflow: hidden;
+}
+
+.close-icon {
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    font-size: 10pt;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--orange);    
+    transition: 0.2s ease-out;
+}
+
+.close-icon:hover {
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* user */
+.user {
+    justify-content: center;
+}
+
+.avatar-page {
+    position: absolute;
+    top: 5vw;    
+    justify-content: center;
+    align-items: center;
+    width: 11.5vw;
+}
+
+.photo-page {
+    width: 100%;
+    border-radius: 50%;
+    z-index: 1;
+    border: 4px solid var(--orange);
+    background-color: var(--midblue);
+}
+
+.info-page {
+    margin: 10vw 2.5vw 2.5vw 2.5vw;
+    width: 100%;
+    padding: 1.5vw;
+    margin-bottom: 5vw;
+    background-color: var(--darkblue);
+    border-radius: 5px;
+}
+
+.name-page {
+    align-items: center;
+    font-size: 13pt;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.person-icon-page {
+    margin-right: 0.3vw;
+    position: relative;
+    top: 4px;
+    color: var(--orange);
+}
+
+.user-link-page {
+    color: white;
+    position: relative;
+    left: 0.3vw;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+    padding: 0.7vw 0;
+    display: flex;
+    align-items: center;
+}
+
+.user-link-page:hover {
+    transform: translateX(5px);
+    opacity: 0.2;
+}
+
+.link-icon-page {
+    font-size: 16pt;
+    position: relative;    
+    left: -5px;
+    transform: rotate(-45deg);
+    color: var(--orange);
+}
+
+/* user type */
+.user-type-page {
+    align-items: center;
+    margin-top: 0.5vw;
+    padding-top: 0.7vw;
+    border-top: 1px solid var(--lightblue);
+}
+
+.type-icon-page {
+    color: var(--orange);
+    margin-right: 0.3vw;
+    position: relative;
+    top: 0.3vw;
+}
+
+/* repos and organisations */
+.repos-and-organisation {
+    z-index: 1;
+    background-color: var(--midblue);
+    flex-direction: column;
+    padding: 2vw;
+}
+
+.repos-title, .organisation-title {
+    font-size: 12pt;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.repos-title {
+    margin-bottom: 0.3vw;
+}
+
+.organisation-title {
+    margin-top: 1.2vw;
+}
+
+.repos-page {
+    width: 95%;
+}
+
+.single-repo, .organisation-page {
+    padding: 1vw;
+    background-color: var(--darkblue);
+    border-radius: 5px;
+    border-left: 4px solid var(--lightblue);
+}
+
+.single-repo {
+    margin: 0.5vw 0;
+}
+
+.single-repo ul, .single-org ul {
+    list-style: none;
+}
+
+.single-repo li {
+    display: inline-block;
+    width: 9vw;    
+    border-left: 1px solid var(--lightblue);
+}
+
+.single-repo ul > :nth-child(1) {
+    text-transform: uppercase;
+    width: 17vw;
+    letter-spacing: 1px;
+    border-left: none;
+}
+
+.single-repo ul > :nth-child(2) {
+    width: 12vw;
+    padding-left: 20px;
+    position: relative;
+}
+
+.lang {
+    color: var(--orange);
+    font-style: italic;
+    margin-left: 5px;
+}
+
+.arrow-icon-page {
+    font-size: 12pt;
+    position: relative;
+    top: 2px;    
+    margin: 0 10px 0 20px;
+    color: var(--orange);
+}
+
+.repo-link, .org-link {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s ease-out;
+    display: inline-block;
+}
+
+.repo-link:hover, .org-link:hover {
+    transform: translateX(5px);    
+    opacity: 0.2;
+}
+
+.organisation-page {
+    width: 95%;
+    margin: 1vw 0;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    font-size: 9pt;
+    font-style: italic;
+}
+
+.single-org ul {
+    display: flex;
+    align-items: center;
+}
+
+.single-org li {
+    display: inline-block;
+    padding: 0.3vw;
+}
+
+.single-org ul > :nth-child(1) {    
+    width: 1.5vw;
+}
+
+.org-avatar {
+    width: 100%;
+    border-radius: 50%;
+    filter: grayscale(1);
+    transition: 0.2s ease-out;
+}
+
+.single-org:hover .org-avatar {
+    filter: grayscale(0);
+}
+
+.no-orgs {
+    font-style: italic;
+    opacity: 0.2;
+    padding: 0.5vw;
+}
+
+/* footer */
+.footer {
+    border-top: 1px solid var(--lightblue);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: linear-gradient(120deg, var(--midblue) 70%, var(--lightblue) 30%);
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 1700px) {
+    .name-page {
+        font-size: 12pt;
+    }
+
+    .user-page {
+        font-size: 10pt;
+    }
+
+    .repos-title, .organisation-title {
+        font-size: 11pt;
+    }
+    
+    .header-name-page {
+        font-size: 32pt;
+    }    
+        
+    .person-icon-page, .type-icon-page {
+        font-size: 16pt;
+    }
+
+    .link-icon-page {
+        font-size: 14pt;
+    }
+
+    .single-repo ul > :nth-child(1) {
+        width: 20vw;
+    }
+    
+    .single-repo ul > :nth-child(2) {
+        width: 12vw;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .user-page {
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 70% 10%;
+    }
+
+    .logo-header-1, .logo-header-2 {
+        display: none;
+    }
+
+    .user, .repos-and-organisation {
+        grid-column: 1/3;
+    }
+
+    .header-name-page {
+        display: none;
+    }    
+        
+    .avatar-page {
+        position: absolute;
+        top: 2vw;
+        left: 3vw;
+        justify-content: center;
+        align-items: center;
+        width: 8vw;
+    }
+
+    .info-page {
+        position: absolute;
+        background-color: transparent;
+        top: -9.5vw;
+        left: 9vw;
+        width: auto;
+    }
+
+    .user-type-page {
+        border-top: none;
+    }
+
+    .repos-and-organisation {
+        position: absolute;
+        width: 100%;
+        top: 13vw;
+        z-index: 1;        
+        flex-direction: column;
+        padding: 1vw 3vw;
+    }
+
+    .repos-page {
+        width: 100%;
+    }
+
+    .single-repo li {
+        width: 10vw;
+        padding: 0.2vw;
+    }
+
+    .single-repo ul > :nth-child(1) {
+        width: 25vw;
+    }
+    
+    .single-repo ul > :nth-child(2) {
+        width: 17vw;
+    }
+
+    .organisation-page {
+        width: 100%;
+        margin: 1vw 0;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    .organisation-title {
+        margin-top: 2vw;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .arrow-icon-page {
+        display: none;
+    }
+
+    .single-repo li {
+        padding: 0.35vw;
+    }
+
+    .single-repo ul > :nth-child(3) {
+        padding-left: 20px;
+    }
+
+    .repos-resp-page {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .user-page {
+        font-size: 9pt;
+    }
+
+    .repos-title, .organisation-title {
+        font-size: 10pt;
+    }
+
+    .langs-resp-page {
+        display: none;
+    }
+
+    .single-repo ul > :nth-child(1) {
+        width: 27vw;
+    }
+    
+    .single-repo ul > :nth-child(2) {
+        width: 15vw;
+    }
+
+    .single-repo li {
+        padding: 1vw;
+    }
+
+    .single-org li {
+        padding: 0.5vw;
+    }
+
+    .organisation-page {
+        padding: 2vw;
+    }
+
+    .org-avatar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .photo-page {
+        border: 3px solid var(--orange);
+    }
+
+    .repos-and-organisation {
+        top: 18vw;
+        padding: 3vw;
+    }
+
+    .single-repo ul > :nth-child(1) {
+        width: 40vw;
+    }
+    
+    .single-repo ul > :nth-child(2) {
+        display: none;
+    }
+
+    .single-repo ul > :nth-child(3) {
+        width: 20vw;
+    }
+
+    .organisation-page {
+        font-size: 8pt;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .single-repo li {
+        padding: 1.3vw;
+    }
+
+    .single-repo ul > :nth-child(1) {
+        width: 50vw;
+    }
+
+    .repos-and-organisation {
+        top: 18vw;
+    }
+}
