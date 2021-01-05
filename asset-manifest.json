@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/omedia/static/css/main.ba8be211.chunk.css",
+    "main.css": "/omedia/static/css/main.5da659be.chunk.css",
     "main.js": "/omedia/static/js/main.f3f37cff.chunk.js",
     "main.js.map": "/omedia/static/js/main.f3f37cff.chunk.js.map",
     "runtime-main.js": "/omedia/static/js/runtime-main.ca22691f.js",
@@ -8,13 +8,13 @@
     "static/js/2.63ffd906.chunk.js": "/omedia/static/js/2.63ffd906.chunk.js",
     "static/js/2.63ffd906.chunk.js.map": "/omedia/static/js/2.63ffd906.chunk.js.map",
     "index.html": "/omedia/index.html",
-    "static/css/main.ba8be211.chunk.css.map": "/omedia/static/css/main.ba8be211.chunk.css.map",
+    "static/css/main.5da659be.chunk.css.map": "/omedia/static/css/main.5da659be.chunk.css.map",
     "static/js/2.63ffd906.chunk.js.LICENSE.txt": "/omedia/static/js/2.63ffd906.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ca22691f.js",
     "static/js/2.63ffd906.chunk.js",
-    "static/css/main.ba8be211.chunk.css",
+    "static/css/main.5da659be.chunk.css",
     "static/js/main.f3f37cff.chunk.js"
   ]
 }
